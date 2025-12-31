@@ -3,70 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        nav a:hover {
-            color: #ccc;
-        }
-        section {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Kayra Aça - Backend Developer</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Personal Website</h1>
-    </header>
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Kayra Aça</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>This is where you can write a brief introduction about yourself, your interests, and your background.</p>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title mb-4">
+                        Hi, I'm <span class="text-gradient">Kayra</span>
+                    </h1>
+                    <p class="hero-subtitle mb-4">
+                        <span id="typewriter"></span>
+                    </p>
+                    <p class="lead mb-5">
+                        Backend developer passionate about cryptography, security, and building robust systems that protect and serve.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary me-3">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="code-container">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="filename">about_me.py</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code><div class="code-line"><span class="keyword">class</span> <span class="class-name">Developer</span>:</div><div class="code-line">    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="param">self</span>):</div><div class="code-line">        <span class="param">self</span>.<span class="property">name</span> = <span class="string">"Kayra Aça"</span></div><div class="code-line">        <span class="param">self</span>.<span class="property">role</span> = <span class="string">"Backend Developer"</span></div><div class="code-line">        <span class="param">self</span>.<span class="property">passion</span> = <span class="string">"Cryptography"</span></div><div class="code-line">        <span class="param">self</span>.<span class="property">languages</span> = [<span class="string">"Python"</span>, <span class="string">"Rust"</span>, <span class="string">"C"</span>]</div><div class="code-line">        <span class="param">self</span>.<span class="property">focus</span> = <span class="string">"Security & Performance"</span></div><div class="code-line"></div><div class="code-line">    <span class="keyword">def</span> <span class="function">get_motto</span>(<span class="param">self</span>):</div><div class="code-line">        <span class="keyword">return</span> <span class="string">"Code with purpose, secure by design"</span></div><div class="code-line"></div><div class="code-line"><span class="comment"># Let's build something amazing together</span></div><div class="code-line"><span class="variable">kayra</span> = <span class="class-name">Developer</span>()</div></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Here, you can showcase some of your projects or works.</p>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-5">
+                        <h2 class="section-title">About Me</h2>
+                        <p class="section-subtitle">Backend developer with a passion for cryptography and secure systems</p>
+                    </div>
+                    
+                    <div class="row g-4 mb-5">
+                        <div class="col-lg-6">
+                            <div class="about-content">
+                                <p class="lead">
+                                    I'm a backend developer who finds beauty in clean code and unbreakable encryption. 
+                                    Currently studying computer science with a deep focus on cryptography and system security.
+                                </p>
+                                <p>
+                                    What drives me is the intersection of mathematics and code - building systems that are not 
+                                    just functional, but fundamentally secure. From implementing cryptographic protocols to 
+                                    optimizing database queries, I love solving complex problems with elegant solutions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <i class="fab fa-python"></i>
+                                    <span>Python</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-rust"></i>
+                                    <span>Rust</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-code"></i>
+                                    <span>C</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-database"></i>
+                                    <span>PostgreSQL</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-lock"></i>
+                                    <span>Cryptography</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-linux"></i>
+                                    <span>Linux</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can provide your contact information here, such as email or social media links.</p>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-5">
+                        <h2 class="section-title">Featured Projects</h2>
+                        <p class="section-subtitle">Some of my work in backend development and cryptography</p>
+                    </div>
+                    
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="project-card">
+                                <div class="project-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h4>Secure File Vault</h4>
+                                <p>End-to-end encrypted file storage system built with Python. Features AES-256 encryption, secure key derivation, and zero-knowledge architecture.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Cryptography</span>
+                                    <span class="tech-tag">FastAPI</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                        View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="project-card">
+                                <div class="project-icon">
+                                    <i class="fas fa-key"></i>
+                                </div>
+                                <h4>Authentication Service</h4>
+                                <p>JWT-based authentication microservice with refresh tokens, rate limiting, and secure password hashing using bcrypt and Argon2.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Rust</span>
+                                    <span class="tech-tag">Actix-web</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                        View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="project-card">
+                                <div class="project-icon">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <h4>Secure Chat Protocol</h4>
+                                <p>Custom encrypted messaging protocol implemented in C. Features perfect forward secrecy, message authentication, and resistance to replay attacks.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">C</span>
+                                    <span class="tech-tag">OpenSSL</span>
+                                    <span class="tech-tag">Networking</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                        View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="project-card">
+                                <div class="project-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h4>Performance Monitor</h4>
+                                <p>System monitoring tool that tracks performance metrics with minimal overhead. Built for high-performance environments with real-time dashboards.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Redis</span>
+                                    <span class="tech-tag">Docker</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                        View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <footer>
-        <p>&copy; 2024 My Personal Website</p>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h2 class="section-title">Let's Connect</h2>
+                        <p class="section-subtitle">Interested in backend development, cryptography, or just want to chat?</p>
+                    </div>
+                    
+                    <div class="contact-container">
+                        <form class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="Subject" required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="text-center">
+                <p>&copy; 2025 Kayra Aça. Built with precision and security in mind.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
