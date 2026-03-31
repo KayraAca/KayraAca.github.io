@@ -1,0 +1,46 @@
+body {
+  background-color: #f8f9fa;
+}
+.form-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top: 20px;
+}
+.table-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top: 20px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+.header {
+  text-align: center;
+  margin: 30px 0;
+  color: #495057;
+}
+.btn-delete {
+  padding: 2px 8px;
+  font-size: 12px;
+}
+.table th {
+  background-color: #6f42c1;
+  color: white;
+  border: none;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+}
+.form-label {
+  font-weight: 600;
+  color: #495057;
+}
+.required {
+  color: red;
+}

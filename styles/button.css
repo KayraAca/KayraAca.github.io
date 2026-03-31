@@ -15,29 +15,52 @@
 
 /* Modifier: Primary (For your Hero CTA) */
 .btn-primary {
-  background-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
   color: white;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
 }
 
 .btn-primary:hover {
-  background-color: #1d4ed8; /* A slightly darker shade for feedback */
-  transform: translateY(-2px); /* Subtle lift effect */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(139, 92, 246, 0.4);
 }
 
 /* Modifier: Ghost/Nav (For your Navbar) */
 .btn-nav {
   background-color: transparent;
   color: var(--text-main);
-  padding: 0.5rem 1rem; /* Slightly smaller for the nav */
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.btn-nav::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .btn-nav:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(139, 92, 246, 0.1);
   color: var(--primary-color);
+}
+
+.btn-nav:hover::after {
+  width: 100%;
 }
 
 .btn-nav.active {
   color: var(--primary-color);
-  background-color: rgba(37, 99, 235, 0.1);
+  background-color: rgba(139, 92, 246, 0.15);
+}
+
+.btn-nav.active::after {
+  width: 100%;
 }

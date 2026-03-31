@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root {
-  /* Colors */
-  --primary-color:   #2563eb;
-  --secondary-color: #64748b;
-  --bg-color:   #f8fafc;
-  --text-main:  #1e293b;
-  --text-muted: #475569;
+  /* Colors - Violet & Teal Theme */
+  --primary-color:   #8b5cf6;
+  --primary-light:   #a78bfa;
+  --secondary-color: #06b6d4;
+  --secondary-light: #22d3ee;
+  --bg-color:   #0f172a;
+  --text-main:  #f1f5f9;
+  --text-muted: #cbd5e1;
+  --text-light: #94a3b8;
 
   /* Spacing Scale */
   --space-xs: 0.25rem; /* 4px */
@@ -18,4 +21,15 @@
   --font-main: 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
   --base-size: 1rem;
+
+  /* Gradient colors */
+  --blob-purple-1: #8b5cf6;
+  --blob-purple-2: #7c3aed;
+  --blob-purple-3: #06b6d4;
+  
+  /* Mouse Interaction Defaults */
+  --mouse-x: 0px;
+  --mouse-y: 0px;
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
 }
